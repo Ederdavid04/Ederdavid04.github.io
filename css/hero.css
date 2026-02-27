@@ -1,0 +1,135 @@
+.hero-oversize {
+  position: relative;
+  min-height: calc(80vh + 80px);
+  padding-top: 80px;
+  background-image: url("../img/paisaje.png");
+
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: white;
+}
+
+
+/* Overlay oscuro suave */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.5)
+  );
+  z-index: 1;
+}
+
+/* Grid decorativo */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  z-index: 2;
+}
+
+/* Contenido */
+.hero-oversize .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+}
+
+.hero-text {
+  max-width: 420px;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-link {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.hero-link:hover {
+  opacity: 1;
+}
+
+/* MODELO */
+.hero-model img {
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+/* Iconos decorativos */
+.deco-icon {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.15;
+  z-index: 2;
+}
+
+.deco-1 {
+  top: 20%;
+  left: 10%;
+}
+
+.deco-2 {
+  bottom: 30%;
+  left: 40%;
+}
+
+.deco-3 {
+  top: 15%;
+  right: 20%;
+}
+
+
+
+@media (max-width: 991px) {
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hero-model img {
+    max-height: 55vh;
+    margin-top: 2rem;
+  }
+}
+
+
+

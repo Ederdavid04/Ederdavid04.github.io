@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE PLINTH | THE SHOP</title>
+    <link rel="shortcut icon" href="img/icon_plinth.png" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Pynion Script Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- IBM Plex Sans Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS and JS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <!-- LOGO -->
+        <a class="navbar-brand pynion fs-1 ms-3" href="#"> The plinth </a>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENÚ COLAPSABLE -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <!-- LINKS -->
+          <div class="navbar-nav mx-auto fs-5">
+            <a class="nav-link active" href="#home">Inicio</a>
+            <a class="nav-link" href="#lanzamientos">Lanzamientos</a>
+            <a class="nav-link" href="#colecciones">Colecciones</a>
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </div>
+
+          <!-- ACCIONES -->
+          <div class="d-flex align-items-center gap-3 me-3">
+            <a href="#carrito" class="btn btn-danger">
+              <i class="bi bi-bag-fill fs-3"></i>
+            </a>
+
+            <a class="btn user" href="#login">
+              <i class="bi bi-person-fill fs-5"></i> Eder
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero-oversize">
+      <div class="hero-overlay"></div>
+
+      <!-- Decoraciones -->
+      <div class="hero-grid"></div>
+      <i class="bi bi-plus-lg deco-icon deco-1"></i>
+      <i class="bi bi-circle deco-icon deco-2"></i>
+      <i class="bi bi-dash-lg deco-icon deco-3"></i>
+
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <!-- TEXTO -->
+          <div class="col-lg-6 hero-content">
+            <p class="hero-eyebrow">
+              <i class="bi bi-lightning-fill"></i> DISEÑOS OVERSIZE
+            </p>
+
+            <h1 class="hero-title">
+              Oversize<br />
+              sin ruido
+            </h1>
+
+            <p class="hero-text">
+              Streetwear pensado para durar. Siluetas amplias, materiales
+              premium y una estética limpia.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#shop" class="btn btn-light btn-lg">
+                Comenzar a comprar</a
+              >
+              <!-- <a href="#about" class="hero-link"> Nuestra visión → </a> -->
+            </div>
+          </div>
+
+          <!-- MODELO -->
+          <div class="col-lg-6 hero-model text-center">
+            <img
+              src="img/model.png"
+              alt="Modelo usando playera oversize"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+
+    <div id="shop" class="container">
+      <header class="shop-header mt-5">
+        <h1 class="shop-title">PLAYERAS ESENCIALES</h1>
+        <p class="shop-subtitle">
+          Diseños minimalistas en algodón orgánico. Calidad y estilo en cada
+          prenda.
+        </p>
+      </header>
+
+      <section class="filter-section">
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="basic">Básicas</button>
+          <button class="filter-btn" data-filter="graphic">Con diseño</button>
+          <button class="filter-btn" data-filter="premium">Organizacion</button>
+          <button class="filter-btn" data-filter="colection">
+            Colecciones
+          </button>
+        </div>
+        <div class="results-info">
+          Mostrando <span id="showing-count">8</span> de
+          <span id="total-count">16</span> productos
+        </div>
+      </section>
+
+      <section class="products-grid" id="products-container">
+        <!-- Los productos se generarán dinámicamente con JavaScript -->
+      </section>
+
+      <section class="pagination" id="pagination-container">
+        <!-- La paginación se generará dinámicamente con JavaScript -->
+      </section>
+    </div>
+
+    <script>
+      // Datos de productos de ejemplo
+      const products = [
+        {
+          id: 1,
+          name: "Playera Minimal Oversize",
+          description:
+            "Corte oversize en algodón orgánico de alta calidad. Perfecta para un look relajado y moderno.",
+          price: 499,
+          category: "colection",
+          colors: ["#1a1a1a", "#ffffff", "#6b7280"],
+          sizes: ["S", "M", "L", "XL"],
+          image:
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "new",
+        },
+        {
+          id: 2,
+          name: "Camiseta Essential Fit",
+          description:
+            "Ajuste perfecto y tejido suave. Ideal para uso diario con un toque de elegancia.",
+          price: 429,
+          category: "basic",
+          colors: ["#1a1a1a", "#374151", "#9ca3af"],
+          sizes: ["XS", "S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 3,
+          name: "Playera Abstract Design",
+          description:
+            "Diseño abstracto exclusivo. Impresión de alta calidad que perdura lavada tras lavada.",
+          price: 599,
+          category: "graphic",
+          colors: ["#ffffff", "#1e40af", "#fbbf24"],
+          sizes: ["S", "M", "L", "XL"],
+          image:
+            "https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "sale",
+        },
+        {
+          id: 4,
+          name: "T-Shirt Premium Cotton",
+          description:
+            "Algodón pima de la más alta calidad. Sensación de lujo y durabilidad excepcional.",
+          price: 799,
+          category: "premium",
+          colors: ["#ffffff", "#1a1a1a"],
+          sizes: ["S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "new",
+        },
+        {
+          id: 5,
+          name: "Playera Typography",
+          description:
+            "Diseño tipográfico minimalista. Frase inspiradora con tipografía cuidadosamente seleccionada.",
+          price: 549,
+          category: "graphic",
+          colors: ["#1a1a1a", "#ffffff", "#dc2626"],
+          sizes: ["XS", "S", "M", "L", "XL"],
+          image:
+            "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 6,
+          name: "Camiseta Linen Blend",
+          description:
+            "Mezcla de lino y algodón para mayor frescura. Ideal para climas cálidos y looks sofisticados.",
+          price: 649,
+          category: "premium",
+          colors: ["#f5f5f5", "#d4d4d4", "#a16207"],
+          sizes: ["S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "sale",
+        },
+        {
+          id: 7,
+          name: "Playera Classic White",
+          description:
+            "Blanca impoluta, el básico imprescindible en cualquier guardarropa. Versátil y atemporal.",
+          price: 399,
+          category: "basic",
+          colors: ["#ffffff"],
+          sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+          image:
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 8,
+          name: "T-Shirt Geometric Pattern",
+          description:
+            "Patrón geométrico moderno. Diseño exclusivo que combina arte y moda.",
+          price: 579,
+          category: "graphic",
+          colors: ["#1a1a1a", "#ffffff", "#3b82f6"],
+          sizes: ["S", "M", "L", "XL"],
+          image:
+            "https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "new",
+        },
+        {
+          id: 9,
+          name: "Playera Black Essential",
+          description:
+            "Negro absoluto, el básico más versátil. Perfecta para combinar con cualquier prenda.",
+          price: 449,
+          category: "basic",
+          colors: ["#1a1a1a"],
+          sizes: ["XS", "S", "M", "L", "XL"],
+          image:
+            "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 10,
+          name: "Camiseta Organic Cotton",
+          description:
+            "100% algodón orgánico certificado. Conciencia ecológica sin comprometer el estilo.",
+          price: 699,
+          category: "premium",
+          colors: ["#ffffff", "#1a1a1a", "#065f46"],
+          sizes: ["S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 11,
+          name: "Playera Line Art",
+          description:
+            "Arte lineal minimalista. Diseño delicado que añade un toque artístico a tu look.",
+          price: 529,
+          category: "graphic",
+          colors: ["#ffffff", "#1a1a1a"],
+          sizes: ["XS", "S", "M", "L", "XL"],
+          image:
+            "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "sale",
+        },
+        {
+          id: 12,
+          name: "T-Shirt Slim Fit",
+          description:
+            "Ajuste slim para una silueta definida. Tejido con elasticidad para mayor comodidad.",
+          price: 479,
+          category: "basic",
+          colors: ["#1a1a1a", "#6b7280", "#ffffff"],
+          sizes: ["XS", "S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 13,
+          name: "Playera Japanese Motif",
+          description:
+            "Motivo japonés inspirado en la estética wabi-sabi. Diseño único y cultural.",
+          price: 649,
+          category: "graphic",
+          colors: ["#ffffff", "#1a1a1a", "#b91c1c"],
+          sizes: ["S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "new",
+        },
+        {
+          id: 14,
+          name: "Camiseta Silk Touch",
+          description:
+            "Toque sedoso con acabado premium. Sensación de lujo en un diseño esencial.",
+          price: 849,
+          category: "premium",
+          colors: ["#f5f5f5", "#1a1a1a"],
+          sizes: ["XS", "S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 15,
+          name: "Playera Grey Heather",
+          description:
+            "Color heather gris, un básico moderno. Perfecta para looks monocromáticos.",
+          price: 429,
+          category: "basic",
+          colors: ["#9ca3af", "#6b7280"],
+          sizes: ["XS", "S", "M", "L", "XL"],
+          image:
+            "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "",
+        },
+        {
+          id: 16,
+          name: "T-Shirt Monogram",
+          description:
+            "Monograma discreto en posición de bolsillo. Elegancia sutil y distintiva.",
+          price: 599,
+          category: "premium",
+          colors: ["#ffffff", "#1a1a1a"],
+          sizes: ["S", "M", "L"],
+          image:
+            "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          badge: "sale",
+        },
+      ];
+
+      // Variables de estado
+      let currentPage = 1;
+      const productsPerPage = 8;
+      let currentFilter = "all";
+      let filteredProducts = [...products];
+
+      // Elementos DOM
+      const productsContainer = document.getElementById("products-container");
+      const paginationContainer = document.getElementById(
+        "pagination-container"
+      );
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const showingCount = document.getElementById("showing-count");
+      const totalCount = document.getElementById("total-count");
+
+      // Inicializar la tienda
+      document.addEventListener("DOMContentLoaded", function () {
+        renderProducts();
+        renderPagination();
+        updateProductCount();
+
+        // Configurar filtros
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remover clase activa de todos los botones
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+            // Agregar clase activa al botón clickeado
+            this.classList.add("active");
+
+            // Actualizar filtro actual
+            currentFilter = this.getAttribute("data-filter");
+
+            // Filtrar productos
+            if (currentFilter === "all") {
+              filteredProducts = [...products];
+            } else {
+              filteredProducts = products.filter(
+                (product) => product.category === currentFilter
+              );
+            }
+
+            // Volver a la primera página
+            currentPage = 1;
+
+            // Renderizar productos y paginación
+            renderProducts();
+            renderPagination();
+            updateProductCount();
+          });
+        });
+      });
+
+      // Función para renderizar productos
+      function renderProducts() {
+        // Limpiar contenedor
+        productsContainer.innerHTML = "";
+
+        // Calcular índices para la página actual
+        const startIndex = (currentPage - 1) * productsPerPage;
+        const endIndex = startIndex + productsPerPage;
+        const productsToShow = filteredProducts.slice(startIndex, endIndex);
+
+        // Generar HTML para cada producto
+        productsToShow.forEach((product) => {
+          const productCard = document.createElement("div");
+          productCard.className = "product-card";
+
+          // Determinar texto de badge
+          let badgeHTML = "";
+          if (product.badge === "new") {
+            badgeHTML = '<span class="badge new">NUEVO</span>';
+          } else if (product.badge === "sale") {
+            badgeHTML = '<span class="badge sale">-20%</span>';
+          }
+
+          // Generar círculos de colores
+          let colorsHTML = "";
+          product.colors.forEach((color) => {
+            colorsHTML += `<div class="color-circle" style="background-color: ${color};" title="Color ${color}"></div>`;
+          });
+
+          productCard.innerHTML = `
+                    ${badgeHTML}
+                    <img src="${product.image}" alt="${
+            product.name
+          }" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${
+                          product.description
+                        }</p>
+                        <div class="product-meta">
+                            <span>Tallas: ${product.sizes.join(", ")}</span>
+                            <span>Disponible</span>
+                        </div>
+                     
+                        <div class="product-actions">
+                            <button class="add-to-cart" onclick="goToVentaShop(${
+                              product.id
+                            })">
+                              Comprar
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+          productsContainer.appendChild(productCard);
+        });
+      }
+
+      // Función para renderizar paginación
+      function renderPagination() {
+        // Limpiar contenedor
+        paginationContainer.innerHTML = "";
+
+        // Calcular número total de páginas
+        const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+        // Botón anterior
+        const prevButton = document.createElement("button");
+        prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+        prevButton.disabled = currentPage === 1;
+        prevButton.addEventListener("click", () => {
+          if (currentPage > 1) {
+            currentPage--;
+            renderProducts();
+            renderPagination();
+          }
+        });
+        paginationContainer.appendChild(prevButton);
+
+        // Páginas
+        const maxVisiblePages = 5;
+        let startPage = Math.max(
+          1,
+          currentPage - Math.floor(maxVisiblePages / 2)
+        );
+        let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+        // Ajustar si no hay suficientes páginas al final
+        if (endPage - startPage + 1 < maxVisiblePages) {
+          startPage = Math.max(1, endPage - maxVisiblePages + 1);
+        }
+
+        // Primera página si no está visible
+        if (startPage > 1) {
+          const firstPageButton = document.createElement("button");
+          firstPageButton.textContent = "1";
+          firstPageButton.addEventListener("click", () => {
+            currentPage = 1;
+            renderProducts();
+            renderPagination();
+          });
+          paginationContainer.appendChild(firstPageButton);
+
+          // Puntos suspensivos si hay un salto
+          if (startPage > 2) {
+            const ellipsis = document.createElement("span");
+            ellipsis.textContent = "...";
+            ellipsis.style.padding = "0 5px";
+            paginationContainer.appendChild(ellipsis);
+          }
+        }
+
+        // Páginas visibles
+        for (let i = startPage; i <= endPage; i++) {
+          const pageButton = document.createElement("button");
+          pageButton.textContent = i;
+          if (i === currentPage) {
+            pageButton.classList.add("active");
+          }
+          pageButton.addEventListener("click", () => {
+            currentPage = i;
+            renderProducts();
+            renderPagination();
+          });
+          paginationContainer.appendChild(pageButton);
+        }
+
+        // Última página si no está visible
+        if (endPage < totalPages) {
+          // Puntos suspensivos si hay un salto
+          if (endPage < totalPages - 1) {
+            const ellipsis = document.createElement("span");
+            ellipsis.textContent = "...";
+            ellipsis.style.padding = "0 5px";
+            paginationContainer.appendChild(ellipsis);
+          }
+
+          const lastPageButton = document.createElement("button");
+          lastPageButton.textContent = totalPages;
+          lastPageButton.addEventListener("click", () => {
+            currentPage = totalPages;
+            renderProducts();
+            renderPagination();
+          });
+          paginationContainer.appendChild(lastPageButton);
+        }
+
+        // Botón siguiente
+        const nextButton = document.createElement("button");
+        nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.addEventListener("click", () => {
+          if (currentPage < totalPages) {
+            currentPage++;
+            renderProducts();
+            renderPagination();
+          }
+        });
+        paginationContainer.appendChild(nextButton);
+      }
+
+      // Función para actualizar el contador de productos
+      function updateProductCount() {
+        const startIndex = (currentPage - 1) * productsPerPage + 1;
+        const endIndex = Math.min(
+          currentPage * productsPerPage,
+          filteredProducts.length
+        );
+
+        showingCount.textContent = `${startIndex}-${endIndex}`;
+        totalCount.textContent = filteredProducts.length;
+      }
+
+      function goToVentaShop(productId) {
+        window.location.href = `venta_shop.html?id=${productId}`;
+      }
+    </script>
+    <div id="footer">
+      <p>&copy; 2024 My Website</p>
+    </div>
+  </body>
+</html>
