@@ -710,3 +710,74 @@ button,
         padding: 14px 12px;
     }
 }
+
+
+/* --- Footer Institucional y Leyenda de Voluntariado --- */
+.app-footer {
+    margin-top: 35px;
+    padding-top: 18px;
+    border-top: 1px solid #eaf3f5;
+    text-align: center;
+}
+
+.app-footer p {
+    font-size: 11.5px !important;
+    color: #82929c !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+}
+
+.app-footer strong {
+    color: #52636c;
+    font-weight: 600;
+}
+
+/* Ajuste sutil para móviles */
+@media (max-width: 600px) {
+    .app-footer {
+        margin-top: 25px;
+        padding-top: 14px;
+    }
+
+    .app-footer p {
+        font-size: 10.5px !important;
+    }
+}
+
+
+
+
+/* ==========================================================
+   PERSONALIZACIÓN DE LA BARRA DE DESPLAZAMIENTO (SCROLLBAR)
+   ========================================================== */
+
+/* Estilo estándar moderno (Firefox y navegadores recientes) */
+html {
+    scrollbar-color: #239ba7 #1b2a35;
+    /* Barra azul/turquesa y fondo oscuro */
+    scrollbar-width: thin;
+}
+
+/* Estilo personalizado Webkit (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Fondo del carril de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #1b2a35;
+}
+
+/* La barra/botón que se desplaza */
+::-webkit-scrollbar-thumb {
+    background: #239ba7;
+    border-radius: 8px;
+    border: 2px solid #1b2a35;
+    /* Crea un margen suave */
+}
+
+/* Al pasar el cursor sobre la barra */
+::-webkit-scrollbar-thumb:hover {
+    background: #1c7f88;
+}
