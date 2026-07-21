@@ -781,3 +781,41 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #1c7f88;
 }
+
+
+
+
+/* --- Footer Institucional Base --- */
+.app-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eaf3f5;
+    text-align: center;
+}
+
+.app-footer p {
+    font-size: 11.5px !important;
+    color: #82929c !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0 !important;
+}
+
+.app-footer strong {
+    color: #52636c;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVIDAD ULTRA COMPACTA PARA TELÉFONOS --- */
+@media (max-width: 600px) {
+    .app-footer {
+        margin-top: 16px;      /* Reduce el espacio con los botones superiores */
+        padding-top: 10px;     /* Reduce la altura de la línea divisoria */
+        border-top-color: #f0f4f6;
+    }
+
+    .app-footer p {
+        font-size: 9.5px !important;  /* Texto pequeño para no ocupar espacio */
+        line-height: 1.3 !important;   /* Interlineado ajustado */
+        opacity: 0.85;                /* Tono suave para no distraer */
+    }
+}
